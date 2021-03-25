@@ -607,6 +607,7 @@ a:active {
     color: #777;
     line-height: 28px;
     margin-top: 8px;
+    text-align: left;
 }
 
 #award-box .award:nth-child(2n),
