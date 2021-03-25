@@ -2316,6 +2316,9 @@
 .fa-meetup:before {
   content: "\f2e0";
 }
+.fa-java {
+  content: "\f4e4";
+}
 .sr-only {
   position: absolute;
   width: 1px;
