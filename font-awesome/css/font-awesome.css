@@ -2316,7 +2316,7 @@
 .fa-meetup:before {
   content: "\f2e0";
 }
-.fa-java {
+.fa-java:before {
   content: "\f4e4";
 }
 .sr-only {
