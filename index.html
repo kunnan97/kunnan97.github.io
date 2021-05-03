@@ -45,7 +45,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
 
-<script type="text/javascript">
+<script>
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
@@ -60,8 +60,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   };
   // Initialize Firebase
   firebase.initializeApp(config);
-    
-  
+ 
   function visit() {
     var db = firebase.database();
     var date = new Date();
@@ -72,14 +71,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         return (current_value || 0) + 1;
     });
   }
-  document.addEventListener('DOMContentLoaded', function() {
-    visit();
-}, false);
+  window.onload = visit;
 </script>
 
 </head>
 
-<body id="page-top" onload="visit();">
+<body id="page-top">
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
