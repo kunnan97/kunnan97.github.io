@@ -68,10 +68,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     var today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     var ref = db.ref('visits').child(today);
 
-//     ref.transaction(current_value => {
-//         return (current_value || 0) + 1;
-//     });
-     ref.set(1);
+    ref.transaction(current_value => {
+        return (current_value || 0) + 1;
+    });
   }
   window.onload = visit;
 </script>
