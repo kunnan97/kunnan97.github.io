@@ -61,8 +61,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
   // Initialize Firebase
   firebase.initializeApp(config);
     
-  var db = firebase.database();
+  
   function visit() {
+      var db = firebase.database();
     const date = new Date();
     const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     const ref = db.ref('visits').child(today);
