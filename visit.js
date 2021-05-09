@@ -4,7 +4,7 @@ function visit() {
       var date = new Date();
       var today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
       var country = response.country;
-      console.log(country);
+      console.log(response);
       var ref = db.ref(today).child(country);
 
       ref.transaction(current_value => {
