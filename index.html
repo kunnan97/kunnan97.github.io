@@ -714,6 +714,10 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <script>
         $(document).ready(function(){
 
+        $.get("http://ip-api.com/json", function(response) {
+          console.log(response.country);
+        }, "jsonp");
+
         $(".filter-b").click(function(){
             var value = $(this).attr('data-filter');
             if(value == "all")
